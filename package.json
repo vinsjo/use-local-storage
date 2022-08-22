@@ -1,6 +1,6 @@
 {
     "name": "@vinsjo/use-local-storage",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "a react hook for storing a state in localStorage",
     "type": "module",
     "source": "./src/index.ts",
