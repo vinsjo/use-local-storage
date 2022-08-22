@@ -105,5 +105,4 @@ const useLocalStorage = (
 	return [state, setState];
 };
 
-export { getStoredItem, setStoredItem, removeStoredItem };
 export default useLocalStorage;
