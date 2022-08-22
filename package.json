@@ -3,7 +3,7 @@
     "version": "1.0.1",
     "description": "a react hook for storing a state in localStorage",
     "type": "module",
-    "source": "./src/index.ts",
+    "source": "./index.ts",
     "main": "./dist/index.js",
     "exports": {
         "default": "./dist/index.js"
