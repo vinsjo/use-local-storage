@@ -22,7 +22,7 @@ const useLocalStorage = (
 		const initialValue =
 			typeof initialState === 'function' ? initialState() : initialState;
 		const stored = getStoredItem(key);
-		return overwrite || (!stored && initialValue && initialState !== stored)
+		return overwrite || (!stored && initialState !== stored)
 			? initialValue
 			: stored;
 	});
