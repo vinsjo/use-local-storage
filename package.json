@@ -1,0 +1,40 @@
+{
+    "name": "@vinsjo/use-local-storage",
+    "version": "1.0.0",
+    "description": "a react hook for storing a state in localStorage",
+    "type": "module",
+    "source": "./src/index.ts",
+    "main": "./dist/index.js",
+    "exports": {
+        "default": "./dist/index.js"
+    },
+    "browserslist": [
+        "defaults and supports es6-module"
+    ],
+    "types": "./dist/index.d.ts",
+    "scripts": {
+        "build": "microbundle",
+        "dev": "microbundle watch"
+    },
+    "devDependencies": {
+        "@types/react": "^18.0.17",
+        "@types/react-dom": "^18.0.6",
+        "microbundle": "^0.15.1"
+    },
+    "author": "Vincent Sjögren",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/vinsjo/use-local-storage"
+    },
+    "keywords": [
+        "ESM",
+        "react",
+        "json",
+        "localStorage"
+    ],
+    "dependencies": {
+        "react": "^18.2.0",
+        "safe-json-decode": "^1.0.1"
+    }
+}
