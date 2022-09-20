@@ -10,17 +10,10 @@
     },
     "type": "module",
     "source": "./src/index.ts",
-    "main": "./dist/index.cjs",
+    "main": "./dist/index.js",
     "module": "./dist/index.js",
-    "umd:main": "./dist/index.umd.js",
     "types": "./dist/index.d.ts",
-    "exports": {
-        ".": {
-            "require": "./dist/index.cjs",
-            "import": "./dist/index.js",
-            "default": "./dist/index.modern.js"
-        }
-    },
+    "exports": "./dist/index.js",
     "files": [
         "src",
         "dist"
@@ -29,7 +22,7 @@
         "defaults and supports es6-module"
     ],
     "scripts": {
-        "build": "microbundle",
+        "build": "microbundle -f esm",
         "dev": "microbundle watch",
         "prepublishOnly": "npm run build",
         "lint": "npx eslint src --ext .ts"
