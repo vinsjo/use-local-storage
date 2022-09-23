@@ -38,8 +38,7 @@ const setStoredItem = <T = unknown>(
 ): boolean => {
 	try {
 		const value = typeof data === 'string' ? data : safeJSON.encode(data);
-		if (typeof value !== 'string') throw 'Invalid Value';
-		if (!value) localStorage.setItem(key, value);
+		localStorage.setItem(key, value);
 		return true;
 	} catch (e) {
 		if (throwOnError) throw e;
