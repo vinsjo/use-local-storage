@@ -1,6 +1,6 @@
 {
     "name": "@vinsjo/use-local-storage",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "description": "a react hook for storing a state in localStorage",
     "author": "Vincent Sjögren",
     "license": "MIT",
