@@ -1,4 +1,4 @@
-import { decode, encode } from 'safe-json-decode';
+import safeJSON from 'safe-json-decode';
 import { useState, useEffect } from 'react';
 import { Dispatch } from 'react';
 
@@ -16,7 +16,7 @@ const getStoredItem = <T = unknown>(
 	try {
 		const value = localStorage.getItem(key);
 		if (value === null) return null;
-		return decode(value) || value;
+		return safeJSON.decode(value) || value;
 	} catch (e) {
 		if (throwOnError) throw e;
 		return null;
@@ -37,7 +37,7 @@ const setStoredItem = <T = unknown>(
 	throwOnError = false
 ): boolean => {
 	try {
-		const value = typeof data === 'string' ? data : encode(data);
+		const value = typeof data === 'string' ? data : safeJSON.encode(data);
 		if (typeof value !== 'string') throw 'Invalid Value';
 		if (!value) localStorage.setItem(key, value);
 		return true;
